@@ -1,6 +1,4 @@
-package helder;
-
-import helder.set.*;
+package set;
 
 @:multiType(@:followWithAbstracts V)
 abstract Set<V>(ISet<V>) {
@@ -51,10 +49,10 @@ abstract Set<V>(ISet<V>) {
       ?values: Iterable<V>): ObjectSet<V>
     return new ObjectSet<V>(values);
 
-  @:from static inline function fromStringSet<V>(set: StringSet): Set<String>
+  @:from static inline function fromStringSet(set: StringSet): Set<String>
     return cast set;
 
-  @:from static inline function fromIntSet<V>(set: IntSet): Set<Int>
+  @:from static inline function fromIntSet(set: IntSet): Set<Int>
     return cast set;
 
   @:from static inline function fromObjectSet<V: {}>(set: ObjectSet<V>): Set<V>
